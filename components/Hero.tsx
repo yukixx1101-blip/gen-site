@@ -8,8 +8,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.82)_100%)]" />
+      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.30)_0%,rgba(0,0,0,0.80)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(198,164,108,0.20),transparent_35%)]" />
 
       <div className="relative flex min-h-screen items-center px-5 pt-28 pb-14">
         <div className="mx-auto max-w-md">
@@ -46,21 +47,6 @@ export default function Hero() {
             >
               実績を見る
             </a>
-          </div>
-
-          <div className="mt-10 grid grid-cols-3 gap-3 text-center">
-            <div className="rounded-2xl border border-white/10 bg-white/10 px-3 py-4 backdrop-blur-sm">
-              <p className="text-xl font-black text-[#c6a46c]">3</p>
-              <p className="mt-1 text-[11px] text-white/70">事業領域</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/10 px-3 py-4 backdrop-blur-sm">
-              <p className="text-xl font-black text-[#c6a46c]">24h</p>
-              <p className="mt-1 text-[11px] text-white/70">相談対応想定</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/10 px-3 py-4 backdrop-blur-sm">
-              <p className="text-xl font-black text-[#c6a46c]">100%</p>
-              <p className="mt-1 text-[11px] text-white/70">丁寧施工主義</p>
-            </div>
           </div>
         </div>
       </div>
