@@ -1,0 +1,18 @@
+name: GenSumidashiAR
+options:
+  bundleIdPrefix: jp.gen
+targets:
+  GenSumidashiAR:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - GenSumidashiARApp.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: jp.gen.sumidashi.ar
+        SWIFT_VERSION: 5.0
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_NSCameraUsageDescription: "現場の床面と墨出し基準点をカメラで合わせるために使用します"
+        INFOPLIST_KEY_UIRequiredDeviceCapabilities: "arkit"
+        GENERATE_INFOPLIST_FILE: YES
