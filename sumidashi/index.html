@@ -113,7 +113,7 @@ function camSyncSize(){
  const ratio=video.videoWidth/video.videoHeight;
  let w=box.width,h=w/ratio;
  if(expanded&&h>box.height){h=box.height;w=h*ratio}
- video.style.width=w+'px';video.style.height=h+'px';
+ video.style.width=w+'px';video.style.height=h+'px';video.style.transform=(!camZoomSupported&&camZoomValue>1)?'scale('+camZoomValue+')':'none';video.style.transformOrigin='center center';
  overlay.style.left=((box.width-w)/2)+'px';overlay.style.top=((box.height-h)/2)+'px';
  overlay.style.width=w+'px';overlay.style.height=h+'px';overlay.style.right='auto';overlay.style.bottom='auto';
 }
@@ -154,7 +154,7 @@ async function camSetZoom(value){
   try{await camTrack.applyConstraints({advanced:[{zoom:v}]});camZoomValue=camTrack.getSettings?.().zoom??v}
   catch(e){$('cameraStatus').textContent='カメラ倍率を変更できません：'+e.message;return}
  }else{camZoomValue=v}
- slider.value=camZoomValue;$('camZoomValue').textContent=Number(camZoomValue).toFixed(1)+'×'+(camZoomSupported?'':'（画面拡大）');
+ slider.value=camZoomValue;camSyncSize();$('camZoomValue').textContent=Number(camZoomValue).toFixed(1)+'×'+(camZoomSupported?'':'（画面拡大）');
  camResetAlignment();
 }
 $('camZoom').onchange=e=>camSetZoom(e.target.value);
